@@ -163,7 +163,7 @@ public class PacManSprites extends SpriteStore {
             return loadSprite("/sprite/pellet.png");
         }
         else if (themeSelect.getThemeNo()==2){
-            return loadSprite("/sprite/pellet_chis.png");
+            return loadSprite("/sprite/pellet_christ.png");
         }
         else if (themeSelect.getThemeNo()==3){
             return loadSprite("/sprite/pellet_ha.png");
