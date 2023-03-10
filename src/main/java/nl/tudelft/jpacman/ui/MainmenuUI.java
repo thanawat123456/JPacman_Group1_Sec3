@@ -7,8 +7,8 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class MainmenuUI extends JFrame {
+    private JLabel bgPac;
     private JButton startButton;
-    private JButton themeButton;
     private JButton exitButton;
     private JTextField textField1;
 
@@ -19,45 +19,36 @@ public class MainmenuUI extends JFrame {
         setLayout(new BorderLayout());
 
         // Create a panel for the buttons
-        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
+        JPanel buttonPanel = new JPanel();
 
+        //Image Bg
+        ImageIcon classicIcon = new ImageIcon(getClass().getResource("/sprite/bgJPacman.png"));
+        bgPac = new JLabel(classicIcon);
+        buttonPanel.add(bgPac);
+        bgPac.setBounds(0, 0, 400, 350);
 
-        ImageIcon classicIcon = new ImageIcon(getClass().getResource("/sprite/dead.png"));
-        startButton = new JButton(classicIcon);
-        startButton.setPreferredSize(new Dimension(100, 100));
+        //Start Button
+        ImageIcon startbBtn = new ImageIcon(getClass().getResource("/sprite/btnStart.png"));
+        startButton = new JButton(startbBtn);
         startButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                // Code to start the classic game
-            }
-        });
-        buttonPanel.add(startButton);
-
-//        // Create the Start button
-//        startButton = new JButton("Start Game");
-//        startButton.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                new Launcher().launch();
-//            }
-//        });
-//        buttonPanel.add(startButton);
-
-        themeButton = new JButton("Start Game");
-        themeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
                 dispose();
             }
         });
-        buttonPanel.add(themeButton);
+        add(startButton);
+        startButton.setBounds(128, 130, 130, 40);
 
         // Create the Exit button
-        exitButton = new JButton("Exit");
+        ImageIcon exitBtn = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
+        exitButton = new JButton(exitBtn);
         exitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         });
-        buttonPanel.add(exitButton);
+        add(exitButton);
+        exitButton.setBounds(128, 200, 130, 40);
 
         // Add the button panel to the center of the frame
         add(buttonPanel, BorderLayout.CENTER);
@@ -66,9 +57,16 @@ public class MainmenuUI extends JFrame {
         setSize(400, 400);
         setLocationRelativeTo(null);
 
+
         // Set the close operation and make the frame visible
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+
+//        setLayout(new FlowLayout(FlowLayout.CENTER,100,10));
+//        buttonPanel.setPreferredSize(new Dimension(100,300));
+//        buttonPanel.setBackground(Color.GRAY);
+        buttonPanel.setLayout(new FlowLayout());
+
     }
 
 
