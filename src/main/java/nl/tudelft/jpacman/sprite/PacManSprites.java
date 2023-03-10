@@ -144,7 +144,7 @@ public class PacManSprites extends SpriteStore {
             return loadSprite("/sprite/floor.png");
         }
         else if (themeSelect.getThemeNo()==2){
-            return loadSprite("/sprite/floor.png");
+            return loadSprite("/sprite/floorBlue.png");
         }
         else if (themeSelect.getThemeNo()==3){
             return loadSprite("/sprite/floor.png");
