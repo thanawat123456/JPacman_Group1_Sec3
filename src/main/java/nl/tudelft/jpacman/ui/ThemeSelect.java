@@ -43,7 +43,7 @@ public class ThemeSelect extends JFrame {
         // Create the Start button
         ImageIcon classicIcon = new ImageIcon(getClass().getResource("/sprite/theme1.png"));
         Image img = classicIcon.getImage();
-        Image newImg = img.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+        Image newImg = img.getScaledInstance(100,100, java.awt.Image.SCALE_SMOOTH);
         classicIcon = new ImageIcon(newImg);
 
         themeBtn1 = new JButton(classicIcon);
@@ -64,7 +64,7 @@ public class ThemeSelect extends JFrame {
 // Create the Start button
         ImageIcon classicIcon2 = new ImageIcon(getClass().getResource("/sprite/theme2.png"));
         Image img2 = classicIcon2.getImage();
-        Image newImg2 = img2.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+        Image newImg2 = img2.getScaledInstance(100,100, java.awt.Image.SCALE_SMOOTH);
         classicIcon2 = new ImageIcon(newImg2);
         themeBtn2 = new JButton(classicIcon2);
         themeBtn2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -81,9 +81,9 @@ public class ThemeSelect extends JFrame {
         add(themeBtn2);
 
         // Create the Theme 3 button
-        ImageIcon classicIcon3 = new ImageIcon(getClass().getResource("/sprite/theme1.png"));
+        ImageIcon classicIcon3 = new ImageIcon(getClass().getResource("/sprite/theme3.png"));
         Image img3 = classicIcon3.getImage();
-        Image newImg3 = img3.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+        Image newImg3 = img3.getScaledInstance(100,100, java.awt.Image.SCALE_SMOOTH);
         classicIcon3 = new ImageIcon(newImg3);
         themeBtn3 = new JButton(classicIcon3);
         themeBtn3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -98,9 +98,9 @@ public class ThemeSelect extends JFrame {
         add(themeBtn3);
 
         // Create the Theme 4 button
-        ImageIcon classicIcon4 = new ImageIcon(getClass().getResource("/sprite/theme1.png"));
+        ImageIcon classicIcon4 = new ImageIcon(getClass().getResource("/sprite/theme4.png"));
         Image img4 = classicIcon4.getImage();
-        Image newImg4 = img4.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
+        Image newImg4 = img4.getScaledInstance(100,100, java.awt.Image.SCALE_SMOOTH);
         classicIcon4 = new ImageIcon(newImg4);
         themeBtn4 = new JButton(classicIcon4);
         themeBtn4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
