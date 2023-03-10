@@ -127,8 +127,8 @@ public class ThemeSelect extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
-
-        btnBackMain = new JButton("Main Menu");
+        ImageIcon btnMainmenu = new ImageIcon(getClass().getResource("/sprite/btnMainmenu.png"));
+        JButton btnBackMain = new JButton(btnMainmenu);
         btnBackMain.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new MainmenuUI();
@@ -136,7 +136,6 @@ public class ThemeSelect extends JFrame {
             }
         });
         add(btnBackMain, BorderLayout.SOUTH);
-
 
 
     }
