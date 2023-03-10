@@ -116,8 +116,8 @@ public class ThemeSelect extends JFrame {
 
         // Add the button panel to the center of the frame
         add(buttonPanel, BorderLayout.CENTER);
-        JLabel startLabel4 = new JLabel("Theme 4", themeBtn4.CENTER);
-        startLabel4.setFont(new Font("Arial", Font.PLAIN, 14));
+//        JLabel startLabel4 = new JLabel("Theme 4", themeBtn4.CENTER);
+//        startLabel4.setFont(new Font("Arial", Font.PLAIN, 14));
 
         // Set the size and center the frame on the screen
         setSize(400, 400);
@@ -135,8 +135,8 @@ public class ThemeSelect extends JFrame {
                 dispose();
             }
         });
-//        add(btnBackMain, BorderLayout.SOUTH);
-        // Add the button panel to the center of the frame
+        add(btnBackMain, BorderLayout.SOUTH);
+
 
 
     }

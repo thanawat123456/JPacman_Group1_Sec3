@@ -73,6 +73,8 @@ public abstract class Game implements LevelObserver {
         }
     }
     public void restart() {
+        Launcher launcher = new Launcher();
+        launcher.dispose();
         new Launcher().launch();
     }
 
