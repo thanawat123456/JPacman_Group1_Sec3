@@ -11,7 +11,7 @@ public class ThemeSelect extends JFrame {
     private JButton startButton2;
     private JButton startButton3;
     private JButton startButton4;
-
+    private JButton btnBackMain;
     public static int themeNo;
 
     public void setThemeNo(int themeNo){
@@ -31,7 +31,7 @@ public class ThemeSelect extends JFrame {
         JPanel buttonPanel = new JPanel(new GridLayout(2, 2, 10, 10));
 
         // Create the Theme Select title label
-        JLabel titleLabel = new JLabel("Theme Selectttt", SwingConstants.CENTER);
+        JLabel titleLabel = new JLabel("Theme Select", SwingConstants.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         add(titleLabel, BorderLayout.NORTH);
 
@@ -59,6 +59,7 @@ public class ThemeSelect extends JFrame {
                 ThemeSelect themeSelect = new ThemeSelect();
                 themeSelect.setThemeNo(1);
                 new Launcher().launch();
+                dispose();
             }
         });
 
@@ -77,7 +78,7 @@ public class ThemeSelect extends JFrame {
         // Create the Start panel
         JPanel startPanel2 = new JPanel(new BorderLayout());
 // Create the Start button
-        ImageIcon classicIcon2 = new ImageIcon(getClass().getResource("/sprite/theme1.png"));
+        ImageIcon classicIcon2 = new ImageIcon(getClass().getResource("/sprite/theme2.png"));
         Image img2 = classicIcon2.getImage();
         Image newImg2 = img2.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
         classicIcon2 = new ImageIcon(newImg2);
@@ -94,53 +95,20 @@ public class ThemeSelect extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(2);
                 new Launcher().launch();
+                dispose();
             }
         });
 
-// Create the Start button label
+        // Create the Start button label
         JLabel startLabel2 = new JLabel("Theme 2", startButton2.CENTER);
         startLabel2.setFont(new Font("Arial", Font.PLAIN, 14));
         startPanel2.add(startLabel2, BorderLayout.SOUTH);
 
-// Add the Start button and label to the Start panel
+        // Add the Start button and label to the Start panel
         startPanel2.add(startButton2, BorderLayout.CENTER);
 
-// Add the Start panel to the button panel
+        // Add the Start panel to the button panel
         buttonPanel.add(startPanel2);
-
-
-//        // Create the Start panel
-//        JPanel startPanel3 = new JPanel(new BorderLayout());
-//// Create the Start button
-//        ImageIcon classicIcon3 = new ImageIcon(getClass().getResource("/sprite/theme1.png"));
-//        Image img3 = classicIcon3.getImage();
-//        Image newImg3 = img3.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
-//        classicIcon3 = new ImageIcon(newImg3);
-//
-//        JButton startButton3 = new JButton(classicIcon3);
-//        startButton3.setPreferredSize(new Dimension(100, 100));
-//        startButton3.setMaximumSize(new Dimension(100, 100));
-//        startButton3.setMinimumSize(new Dimension(100, 100));
-//        startButton3.setBorderPainted(false);
-//        startButton3.setFocusPainted(false);
-//        startButton3.setContentAreaFilled(false);
-//        startButton3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-//        startButton3.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                // Code to start the game
-//            }
-//        });
-//
-//// Create the Start button label
-//        JLabel startLabel3 = new JLabel("Click to Start", startButton3.CENTER);
-//        startLabel3.add(startLabel3, BorderLayout.SOUTH);
-//
-//// Add the Start button and label to the Start panel
-//        startPanel3.add(startButton3, BorderLayout.CENTER);
-//
-//// Add the Start panel to the button panel
-//        buttonPanel.add(startPanel3);
-
 
         // Create the Theme 2 button
         JPanel startPanel3 = new JPanel(new BorderLayout());
@@ -159,6 +127,8 @@ public class ThemeSelect extends JFrame {
         startButton3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(3);
+                new Launcher().launch();
+                dispose();
             }
         });
         buttonPanel.add(startButton3);
@@ -169,10 +139,10 @@ public class ThemeSelect extends JFrame {
         startLabel3.setFont(new Font("Arial", Font.PLAIN, 14));
         startPanel3.add(startLabel3, BorderLayout.SOUTH);
 
-// Add the Start button and label to the Start panel
+        // Add the Start button and label to the Start panel
         startPanel3.add(startButton3, BorderLayout.CENTER);
 
-// Add the Start panel to the button panel
+        // Add the Start panel to the button panel
         buttonPanel.add(startPanel3);
 
 
@@ -193,6 +163,8 @@ public class ThemeSelect extends JFrame {
         startButton4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(4);
+                new Launcher().launch();
+                dispose();
             }
         });
         buttonPanel.add(startButton4);
@@ -210,9 +182,9 @@ public class ThemeSelect extends JFrame {
         buttonPanel.add(startPanel4);
 
 
-        JLabel titleLabel2 = new JLabel("Theme Selasdfsdfect", SwingConstants.CENTER);
-        titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
-        add(titleLabel2, BorderLayout.LINE_END);
+//        JLabel titleLabel2 = new JLabel("Theme Selasdfsdfect", SwingConstants.CENTER);
+//        titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
+//        add(titleLabel2, BorderLayout.LINE_END);
 
         // Set the size and center the frame on the screen
         setSize(500, 500);
@@ -224,7 +196,16 @@ public class ThemeSelect extends JFrame {
         setVisible(true);
 
 
+        // Create the Theme Select title label
 
+        btnBackMain = new JButton("Main Menu");
+        btnBackMain.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new MainmenuUI();
+                dispose();
+            }
+        });
+        add(btnBackMain, BorderLayout.SOUTH);
 
 
 

@@ -32,19 +32,20 @@ public class MainmenuUI extends JFrame {
         });
         buttonPanel.add(startButton);
 
-        // Create the Start button
-        startButton = new JButton("Start Game");
-        startButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                new Launcher().launch();
-            }
-        });
-        buttonPanel.add(startButton);
+//        // Create the Start button
+//        startButton = new JButton("Start Game");
+//        startButton.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent e) {
+//                new Launcher().launch();
+//            }
+//        });
+//        buttonPanel.add(startButton);
 
-        themeButton = new JButton("Theme Select");
+        themeButton = new JButton("Start Game");
         themeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
+                dispose();
             }
         });
         buttonPanel.add(themeButton);

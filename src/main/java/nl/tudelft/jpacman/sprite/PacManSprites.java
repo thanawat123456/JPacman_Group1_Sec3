@@ -118,13 +118,15 @@ public class PacManSprites extends SpriteStore {
      */
     public Sprite getWallSprite() {
         if (themeSelect.getThemeNo() == 1){
-            return loadSprite("/sprite/tree.png");
-        }
-        else if (themeSelect.getThemeNo()==2){
             return loadSprite("/sprite/wall.png");
         }
-        else{
-            return loadSprite("/sprite/tree.png");
+        else if (themeSelect.getThemeNo()==2){
+            return loadSprite("/sprite/wall_christ.png");
+        }
+        else if (themeSelect.getThemeNo()==2){
+            return loadSprite("/sprite/wall_halloween.png");
+        }else {
+            return loadSprite("/sprite/wall_tom.png");
         }
     }
 
@@ -139,7 +141,17 @@ public class PacManSprites extends SpriteStore {
      * @return The sprite for the
      */
     public Sprite getPelletSprite() {
-        return loadSprite("/sprite/c1.png");
+        if (themeSelect.getThemeNo() == 1){
+            return loadSprite("/sprite/pellet.png");
+        }
+        else if (themeSelect.getThemeNo()==2){
+            return loadSprite("/sprite/pellet_christ.png");
+        }
+        else if (themeSelect.getThemeNo()==2){
+            return loadSprite("/sprite/pellet_halloween.png");
+        }else {
+            return loadSprite("/sprite/pellet_tom.png");
+        }
     }
 
     /**
