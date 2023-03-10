@@ -4,13 +4,14 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import nl.tudelft.jpacman.Launcher;
 import nl.tudelft.jpacman.game.Game;
 import nl.tudelft.jpacman.ui.ScorePanel.ScoreFormatter;
 
 /**
  * Builder for the JPac-Man UI.
  *
- * @author Jeroen Roosen 
+ * @author Jeroen Roosen
  */
 public class  PacManUiBuilder {
 
@@ -25,6 +26,7 @@ public class  PacManUiBuilder {
     private static final String START_CAPTION = "Start";
 
     private static final String RESTART_CAPTION = "Restart";
+    private static final String THEME_CAPTION = "Theme";
 
     /**
      * Map of buttons and their actions.
@@ -69,14 +71,22 @@ public class  PacManUiBuilder {
             addStartButton(game);
             addStopButton(game);
             addRestartButton(game);
+            addTheme(game);
         }
         return new PacManUI(game, buttons, keyMappings, scoreFormatter);
     }
 
     private void addRestartButton(final Game game) {
+
+        assert game != null;
+        buttons.put(RESTART_CAPTION, game::restart);
+
+    }
+
+    private void addTheme(final Game game) {
         assert game != null;
 
-        buttons.put(RESTART_CAPTION, game::restart);
+        buttons.put(THEME_CAPTION, game::theme);
     }
 
     /**

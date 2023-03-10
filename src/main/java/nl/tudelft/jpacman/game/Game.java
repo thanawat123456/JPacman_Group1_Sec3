@@ -8,6 +8,7 @@ import nl.tudelft.jpacman.level.Level;
 import nl.tudelft.jpacman.level.Level.LevelObserver;
 import nl.tudelft.jpacman.level.Player;
 import nl.tudelft.jpacman.points.PointCalculator;
+import nl.tudelft.jpacman.ui.ThemeSelect;
 
 /**
  * A basic implementation of a Pac-Man game.
@@ -118,5 +119,10 @@ public abstract class Game implements LevelObserver {
         stop();
     }
 
+    public void theme() {
+        Launcher launcher = new Launcher();
+        launcher.dispose();
+        new ThemeSelect();
 
+    }
 }

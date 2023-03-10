@@ -105,8 +105,13 @@ public class ThemeSelect extends JFrame {
         Image newImg4 = img4.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
         classicIcon4 = new ImageIcon(newImg4);
         themeBtn4 = new JButton(classicIcon4);
+        themeBtn4.setPreferredSize(new Dimension(100, 100));
+        themeBtn4.setMaximumSize(new Dimension(100, 100));
+        themeBtn4.setMinimumSize(new Dimension(100, 100));
+        themeBtn4.setBorderPainted(false);
+        themeBtn4.setFocusPainted(false);
+        themeBtn4.setContentAreaFilled(false);
         themeBtn4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        themeBtn4.setBounds(120, 210, 100, 100);
         themeBtn4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(4);
@@ -114,7 +119,7 @@ public class ThemeSelect extends JFrame {
                 dispose();
             }
         });
-        add(themeBtn4);
+        buttonPanel.add(themeBtn4);
 
         // Add the button panel to the center of the frame
         add(buttonPanel, BorderLayout.CENTER);
@@ -126,7 +131,7 @@ public class ThemeSelect extends JFrame {
         startPanel4.add(themeBtn4, BorderLayout.CENTER);
 
 // Add the Start panel to the button panel
-        add(startPanel4);
+        buttonPanel.add(startPanel4);
 
         // Set the size and center the frame on the screen
         setSize(400, 400);
@@ -136,18 +141,19 @@ public class ThemeSelect extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
 
+
         // Create the Theme Select title label
 
-//        btnBackMain = new JButton("Main Menu");
-//        btnBackMain.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                new MainmenuUI();
-//                dispose();
-//            }
-//        });
-//        add(btnBackMain, BorderLayout.SOUTH);
-//
-//
+        btnBackMain = new JButton("Main Menu");
+        btnBackMain.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new MainmenuUI();
+                dispose();
+            }
+        });
+        add(btnBackMain, BorderLayout.SOUTH);
+
+
 
     }
 
