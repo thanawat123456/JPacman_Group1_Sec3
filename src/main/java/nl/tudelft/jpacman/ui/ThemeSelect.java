@@ -48,7 +48,7 @@ public class ThemeSelect extends JFrame {
 
         themeBtn1 = new JButton(classicIcon);
         themeBtn1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        themeBtn1.setBounds(100, 80, 100, 100);
+        themeBtn1.setBounds(60, 80, 100, 100);
         themeBtn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(1);
@@ -61,7 +61,6 @@ public class ThemeSelect extends JFrame {
         add(themeBtn1);
 
         // Create the Start panel
-        JPanel startPanel2 = new JPanel(new BorderLayout());
 // Create the Start button
         ImageIcon classicIcon2 = new ImageIcon(getClass().getResource("/sprite/theme2.png"));
         Image img2 = classicIcon2.getImage();
@@ -69,7 +68,7 @@ public class ThemeSelect extends JFrame {
         classicIcon2 = new ImageIcon(newImg2);
         themeBtn2 = new JButton(classicIcon2);
         themeBtn2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        themeBtn2.setBounds(100, 210, 100, 100);
+        themeBtn2.setBounds(60, 210, 100, 100);
         themeBtn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(2);
@@ -88,7 +87,7 @@ public class ThemeSelect extends JFrame {
         classicIcon3 = new ImageIcon(newImg3);
         themeBtn3 = new JButton(classicIcon3);
         themeBtn3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        themeBtn3.setBounds(120, 80, 100, 100);
+        themeBtn3.setBounds(220, 80, 100, 100);
         themeBtn3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(3);
@@ -99,19 +98,13 @@ public class ThemeSelect extends JFrame {
         add(themeBtn3);
 
         // Create the Theme 4 button
-        JPanel startPanel4 = new JPanel(new BorderLayout());
         ImageIcon classicIcon4 = new ImageIcon(getClass().getResource("/sprite/theme1.png"));
         Image img4 = classicIcon4.getImage();
         Image newImg4 = img4.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
         classicIcon4 = new ImageIcon(newImg4);
         themeBtn4 = new JButton(classicIcon4);
-        themeBtn4.setPreferredSize(new Dimension(100, 100));
-        themeBtn4.setMaximumSize(new Dimension(100, 100));
-        themeBtn4.setMinimumSize(new Dimension(100, 100));
-        themeBtn4.setBorderPainted(false);
-        themeBtn4.setFocusPainted(false);
-        themeBtn4.setContentAreaFilled(false);
         themeBtn4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        themeBtn4.setBounds(220, 210, 100, 100);
         themeBtn4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(4);
@@ -119,19 +112,12 @@ public class ThemeSelect extends JFrame {
                 dispose();
             }
         });
-        buttonPanel.add(themeBtn4);
+        add(themeBtn4);
 
         // Add the button panel to the center of the frame
         add(buttonPanel, BorderLayout.CENTER);
         JLabel startLabel4 = new JLabel("Theme 4", themeBtn4.CENTER);
         startLabel4.setFont(new Font("Arial", Font.PLAIN, 14));
-        startPanel4.add(startLabel4, BorderLayout.SOUTH);
-
-// Add the Start button and label to the Start panel
-        startPanel4.add(themeBtn4, BorderLayout.CENTER);
-
-// Add the Start panel to the button panel
-        buttonPanel.add(startPanel4);
 
         // Set the size and center the frame on the screen
         setSize(400, 400);
@@ -142,8 +128,6 @@ public class ThemeSelect extends JFrame {
         setVisible(true);
 
 
-        // Create the Theme Select title label
-
         btnBackMain = new JButton("Main Menu");
         btnBackMain.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -151,8 +135,8 @@ public class ThemeSelect extends JFrame {
                 dispose();
             }
         });
-        add(btnBackMain, BorderLayout.SOUTH);
-
+//        add(btnBackMain, BorderLayout.SOUTH);
+        // Add the button panel to the center of the frame
 
 
     }

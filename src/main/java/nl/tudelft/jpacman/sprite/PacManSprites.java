@@ -123,9 +123,13 @@ public class PacManSprites extends SpriteStore {
         else if (themeSelect.getThemeNo()==2){
             return loadSprite("/sprite/wall_christ.png");
         }
-        else if (themeSelect.getThemeNo()==2){
-            return loadSprite("/sprite/wall_halloween.png");
-        }else {
+        else if (themeSelect.getThemeNo()==3){
+            return loadSprite("/sprite/wall_ha.png");
+        }
+        else if (themeSelect.getThemeNo()==4){
+            return loadSprite("/sprite/wall_tom.png");
+        }
+        else {
             return loadSprite("/sprite/wall_tom.png");
         }
     }
@@ -134,7 +138,21 @@ public class PacManSprites extends SpriteStore {
      * @return The sprite for the ground.
      */
     public Sprite getGroundSprite() {
-        return loadSprite("/sprite/floor.png");
+
+
+        if (themeSelect.getThemeNo() == 1){
+            return loadSprite("/sprite/floor.png");
+        }
+        else if (themeSelect.getThemeNo()==2){
+            return loadSprite("/sprite/floor.png");
+        }
+        else if (themeSelect.getThemeNo()==3){
+            return loadSprite("/sprite/floor.png");
+        }
+
+        else {
+            return loadSprite("/sprite/floor.png");
+        }
     }
 
     /**
@@ -145,12 +163,16 @@ public class PacManSprites extends SpriteStore {
             return loadSprite("/sprite/pellet.png");
         }
         else if (themeSelect.getThemeNo()==2){
-            return loadSprite("/sprite/pellet_christ.png");
+            return loadSprite("/sprite/pellet_chis.png");
         }
-        else if (themeSelect.getThemeNo()==2){
-            return loadSprite("/sprite/pellet_halloween.png");
-        }else {
+        else if (themeSelect.getThemeNo()==3){
+            return loadSprite("/sprite/pellet_ha.png");
+        }
+        else if (themeSelect.getThemeNo()==4){
             return loadSprite("/sprite/pellet_tom.png");
+        }
+        else{
+            return loadSprite("/sprite/pellet.png");
         }
     }
 
