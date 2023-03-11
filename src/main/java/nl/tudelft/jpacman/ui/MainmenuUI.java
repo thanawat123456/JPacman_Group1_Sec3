@@ -66,7 +66,7 @@ public class MainmenuUI extends JFrame {
 //        buttonPanel.setPreferredSize(new Dimension(100,300));
 //        buttonPanel.setBackground(Color.GRAY);
         buttonPanel.setLayout(new FlowLayout());
-
+        setResizable(false);
     }
 
 

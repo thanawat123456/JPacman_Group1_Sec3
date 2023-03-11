@@ -136,7 +136,7 @@ public class ThemeSelect extends JFrame {
             }
         });
         add(btnBackMain, BorderLayout.SOUTH);
-
+        setResizable(false);
 
     }
 

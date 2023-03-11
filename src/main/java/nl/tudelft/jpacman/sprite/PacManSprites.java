@@ -108,9 +108,34 @@ public class PacManSprites extends SpriteStore {
     public Map<Direction, Sprite> getGhostSprite(GhostColor color) {
         assert color != null;
 
-        String resource = "/sprite/ghost_" + color.name().toLowerCase()
-            + ".png";
-        return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        if (themeSelect.getThemeNo() == 1){
+            String resource = "/sprite/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 2){
+            String resource = "/sprite_theme2/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+
+        else if (themeSelect.getThemeNo() == 3){
+            String resource = "/sprite_theme3/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 4){
+            String resource = "/sprite_theme4/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+        else {
+            String resource = "/sprite/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+
+
     }
 
     /**
