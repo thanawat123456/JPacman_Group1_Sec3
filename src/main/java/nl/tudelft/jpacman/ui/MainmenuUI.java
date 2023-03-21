@@ -1,5 +1,7 @@
 package nl.tudelft.jpacman.ui;
 
+import nl.tudelft.jpacman.CheckPoint;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -22,7 +24,7 @@ public class MainmenuUI extends JFrame {
         startButton = new JButton(startbBtn);
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                new ThemeSelect();
+                new CheckPoint();
                 mainPanel.dispose();
             }
         });
