@@ -1,10 +1,9 @@
 package nl.tudelft.jpacman.ui;
 
+import java.awt.*;
 import java.util.Map;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  * A panel containing a button for every registered action.
@@ -29,12 +28,19 @@ class ButtonPanel extends JPanel {
         assert parent != null;
 
         for (final String caption : buttons.keySet()) {
-            JButton button = new JButton(caption);
+            ImageIcon icon = new ImageIcon(getClass().getResource("/panel_theme/in game button/" + caption.toLowerCase() + "_ingame.png"));
+            Image iconImg = icon.getImage();
+            Image iconPic = iconImg.getScaledInstance(102,34, java.awt.Image.SCALE_SMOOTH);
+            icon = new ImageIcon(iconPic);
+            JButton button = new JButton(icon);
             button.addActionListener(e -> {
                 buttons.get(caption).doAction();
                 parent.requestFocusInWindow();
             });
+            button.setBorderPainted(false);
+            button.setContentAreaFilled(false);
             add(button);
         }
+
     }
 }

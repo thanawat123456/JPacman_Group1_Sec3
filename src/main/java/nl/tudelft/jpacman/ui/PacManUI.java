@@ -103,6 +103,7 @@ public class PacManUI extends JFrame {
 
     public void start() {
         setVisible(true);
+        setLocationRelativeTo(null);
         ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
         service.scheduleAtFixedRate(this::nextFrame, 0, FRAME_INTERVAL, TimeUnit.MILLISECONDS);
     }
