@@ -56,7 +56,36 @@ public class PacManSprites extends SpriteStore {
      * @return A map of animated Pac-Man sprites for all directions.
      */
     public Map<Direction, Sprite> getPacmanSprites() {
-        return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
+        if (themeSelect.getThemeNo() == 1){
+            String resource = "/sprite/pacman";
+            return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 2){
+            String resource = "/sprite/pacman";
+            return directionSprite("/sprite/santa.png", PACMAN_ANIMATION_FRAMES);
+        }
+
+        else if (themeSelect.getThemeNo() == 3){
+            String resource = "/sprite/pacman";
+            return directionSprite("/sprite/human.png", PACMAN_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 4){
+            String resource = "/sprite/pacman";
+            return directionSprite("/sprite/jerry.png", PACMAN_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 5){
+            String resource = "/sprite/pacman";
+            return directionSprite("/sprite/forrest.png", PACMAN_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 6){
+            String resource = "/sprite/pacman";
+            return directionSprite("/sprite/mario.png", PACMAN_ANIMATION_FRAMES);
+        }
+        else {
+            String resource = "/sprite/pacman";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+
     }
 
     /**
@@ -129,6 +158,16 @@ public class PacManSprites extends SpriteStore {
                 + ".png";
             return directionSprite(resource, GHOST_ANIMATION_FRAMES);
         }
+        else if (themeSelect.getThemeNo() == 5){
+            String resource = "/sprite_theme5/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 6){
+            String resource = "/sprite_theme6/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
         else {
             String resource = "/sprite/ghost_" + color.name().toLowerCase()
                 + ".png";
@@ -153,6 +192,12 @@ public class PacManSprites extends SpriteStore {
         }
         else if (themeSelect.getThemeNo()==4){
             return loadSprite("/sprite/wall_tom.png");
+        }
+        else if (themeSelect.getThemeNo()==5){
+            return loadSprite("/sprite/wall_forest.png");
+        }
+        else if (themeSelect.getThemeNo()==6){
+            return loadSprite("/sprite/wall_mario.png");
         }
         else {
             return loadSprite("/sprite/wall_tom.png");
@@ -195,6 +240,9 @@ public class PacManSprites extends SpriteStore {
         }
         else if (themeSelect.getThemeNo()==4){
             return loadSprite("/sprite/pellet_tom.png");
+        }
+        else if (themeSelect.getThemeNo()==6){
+            return loadSprite("/sprite/pellet_mario.png");
         }
         else{
             return loadSprite("/sprite/pellet.png");

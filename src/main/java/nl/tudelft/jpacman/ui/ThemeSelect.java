@@ -107,7 +107,7 @@ public class ThemeSelect extends JFrame {
         themePanel.add(themeBtn4);
 
         // Create the Theme 5 button
-        ImageIcon classicIcon5 = new ImageIcon(getClass().getResource("/sprite/theme2.png"));
+        ImageIcon classicIcon5 = new ImageIcon(getClass().getResource("/sprite/theme5.png"));
         Image img5 = classicIcon5.getImage();
         Image newImg5 = img5.getScaledInstance(150,150, java.awt.Image.SCALE_SMOOTH);
         classicIcon5 = new ImageIcon(newImg5);
@@ -116,7 +116,7 @@ public class ThemeSelect extends JFrame {
         themeBtn5.setBounds(320, 450, 150, 150);
         themeBtn5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                setThemeNo(2);
+                setThemeNo(5);
                 new Launcher().launch();
                 themePanel.dispose();
             }
@@ -125,7 +125,7 @@ public class ThemeSelect extends JFrame {
         themePanel.add(themeBtn5);
 
         // Create the Theme 6 button
-        ImageIcon classicIcon6 = new ImageIcon(getClass().getResource("/sprite/theme3.png"));
+        ImageIcon classicIcon6 = new ImageIcon(getClass().getResource("/sprite/theme6.png"));
         Image img6 = classicIcon6.getImage();
         Image newImg6 = img6.getScaledInstance(150,150, java.awt.Image.SCALE_SMOOTH);
         classicIcon6 = new ImageIcon(newImg6);
@@ -134,7 +134,7 @@ public class ThemeSelect extends JFrame {
         themeBtn6.setBounds(560, 450, 150, 150);
         themeBtn6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                setThemeNo(3);
+                setThemeNo(6);
                 new Launcher().launch();
                 themePanel.dispose();
             }
