@@ -9,8 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CheckPoint extends JFrame {
-
     private JLabel bgPac;
+    private JLabel logoPac;
     private JButton startButton;
     private JButton exitButton;
     private JTextField textField1;
@@ -25,7 +25,7 @@ public class CheckPoint extends JFrame {
     public static int getCheckpoint() {
         return checkpoint;
     }
-    public  static String board;
+    public  static String board="/board.txt";
 
     public static String getBoard() {
         return board;
@@ -42,23 +42,13 @@ public class CheckPoint extends JFrame {
     public CheckPoint() {
         super("Pacman Main Menu");
 
-        // Set the layout manager for the frame
-        setLayout(new BorderLayout());
-
         // Create a panel for the buttons
-        JPanel buttonPanel = new JPanel();
-
-        //Image Bg
-        ImageIcon classicIcon = new ImageIcon(getClass().getResource("/sprite/bgJPacman.png"));
-        bgPac = new JLabel(classicIcon);
-        buttonPanel.add(bgPac);
-        bgPac.setBounds(0, 0, 400, 350);
+        JFrame mainPanel = new JFrame();
 
         //Start Button
-        ImageIcon bg1 = new ImageIcon(getClass().getResource("/sprite/btnStart.png"));
-        check1 = new JButton("Map 1");
-        check1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        check1.addActionListener(new ActionListener() {
+        ImageIcon startbBtn = new ImageIcon(getClass().getResource("/panel_theme/main menu/start.png"));
+        startButton = new JButton("Map 1");
+        startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
                 setCheckpoint(1);
@@ -66,13 +56,18 @@ public class CheckPoint extends JFrame {
                 dispose();
             }
         });
-        add(check1);
-        check1.setBounds(128, 100, 130, 40);
+        //hide background of JButton
+        startButton.setBorderPainted(false);
+        startButton.setContentAreaFilled(false);
+        startButton.setFocusPainted(false);
+        startButton.setOpaque(false);
+        startButton.setBounds(290, 300, 205, 68);
+        startButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mainPanel.add(startButton);
 
         // Create the Exit button
-        ImageIcon exitBtn = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
+        ImageIcon exitBtn = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
         check2 = new JButton("Map 2");
-        check2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
@@ -81,28 +76,38 @@ public class CheckPoint extends JFrame {
                 dispose();
             }
         });
-        add(check2);
-        check2.setBounds(128, 150, 130, 40);
+        //hide background of JButton
+        check2.setBorderPainted(false);
+        check2.setContentAreaFilled(false);
+        check2.setFocusPainted(false);
+        check2.setOpaque(false);
+        check2.setBounds(290, 380, 205, 68);
+        check2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mainPanel.add(check2);
 
-        // Create the Exit button
-        ImageIcon bg2 = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
+
+        ImageIcon bgcheck2 = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
         check3 = new JButton("Map 3");
-        check3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
-                setCheckpoint(4);
-                board = "/board2.txt";
+                setCheckpoint(3);
+                board = "/board3.txt";
                 dispose();
             }
         });
-        add(check3);
-        check3.setBounds(128, 200, 130, 40);
+        //hide background of JButton
+        check3.setBorderPainted(false);
+        check3.setContentAreaFilled(false);
+        check3.setFocusPainted(false);
+        check3.setOpaque(false);
+        check3.setBounds(290, 460, 205, 68);
+        check3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mainPanel.add(check3);
 
-        // Create the Exit button
-        ImageIcon bg4 = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
+
+        ImageIcon bgcheck4 = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
         check4 = new JButton("Map 4");
-        check4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
@@ -111,14 +116,18 @@ public class CheckPoint extends JFrame {
                 dispose();
             }
         });
-        add(check4);
-        check4.setBounds(128, 250, 130, 40);
+        //hide background of JButton
+        check4.setBorderPainted(false);
+        check4.setContentAreaFilled(false);
+        check4.setFocusPainted(false);
+        check4.setOpaque(false);
+        check4.setBounds(290, 540, 205, 68);
+        check4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mainPanel.add(check4);
 
 
-        // Create the Exit button
-        ImageIcon bg5 = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
+        ImageIcon bgcheck5 = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
         check5 = new JButton("Map 5");
-        check5.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
@@ -127,36 +136,81 @@ public class CheckPoint extends JFrame {
                 dispose();
             }
         });
-        add(check5);
-        check5.setBounds(128, 300, 130, 40);
+        //hide background of JButton
+        check5.setBorderPainted(false);
+        check5.setContentAreaFilled(false);
+        check5.setFocusPainted(false);
+        check5.setOpaque(false);
+        check5.setBounds(290, 620, 205, 68);
+        check5.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mainPanel.add(check5);
 
-        // Add the button panel to the center of the frame
-        add(buttonPanel, BorderLayout.CENTER);
 
-        // Set the size and center the frame on the screen
-        setSize(400, 400);
-        setLocationRelativeTo(null);
 
-        ImageIcon btnMainmenu = new ImageIcon(getClass().getResource("/sprite/btnMainmenu.png"));
+
+
+
+        // Create the Exit buttonIcon
+        ImageIcon exitBtnIcon = new ImageIcon(getClass().getResource("/panel_theme/main menu/quit.png"));
+        JButton exitIcon = new JButton(exitBtnIcon);
+        exitIcon.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        //hide background of JButton
+        exitIcon.setBorderPainted(false);
+        exitIcon.setContentAreaFilled(false);
+        exitIcon.setFocusPainted(false);
+        exitIcon.setOpaque(false);
+
+        exitIcon.setBounds(720, 30, 50, 53);
+        exitIcon.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mainPanel.add(exitIcon);
+
+
+
+        ImageIcon btnMainmenu = new ImageIcon(getClass().getResource("/panel_theme/theme select/back.png"));
+        Image btnMain = btnMainmenu.getImage();
+        Image btnMainMenu = btnMain.getScaledInstance(205, 68, java.awt.Image.SCALE_SMOOTH);
+        btnMainmenu = new ImageIcon(btnMainMenu);
         JButton btnBackMain = new JButton(btnMainmenu);
         btnBackMain.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        btnBackMain.setBounds(290, 730, 205, 68);
         btnBackMain.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new MainmenuUI();
                 dispose();
             }
         });
-        add(btnBackMain, BorderLayout.SOUTH);
+        //hide background of JButton
+        btnBackMain.setBorderPainted(false);
+        btnBackMain.setContentAreaFilled(false);
+        btnBackMain.setFocusPainted(false);
+        btnBackMain.setOpaque(false);
+        mainPanel.add(btnBackMain);
 
+        //Image Bg
+        //ImageIcon classicIcon = new ImageIcon(getClass().getResource("/sprite/bgJPacman.png"));
+        ImageIcon classicIcon = new ImageIcon(getClass().getResource("/panel_theme/bg.png"));
+        bgPac = new JLabel(classicIcon);
+        bgPac.setSize(800,800);
 
-        // Set the close operation and make the frame visible
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
+        //Image Logo
+        ImageIcon logo = new ImageIcon(getClass().getResource("/panel_theme/logo.png"));
+        logoPac = new JLabel(logo);
+        logoPac.setBounds(150, 20, 470,288);
+        mainPanel.add(logoPac);
 
-//        setLayout(new FlowLayout(FlowLayout.CENTER,100,10));
-//        buttonPanel.setPreferredSize(new Dimension(100,300));
-//        buttonPanel.setBackground(Color.GRAY);
-        buttonPanel.setLayout(new FlowLayout());
+//        mainPanel.setTitle("MAIN TEST");
+        mainPanel.setUndecorated(true); // <-- the title bar is removed here
+        mainPanel.setSize(800,800);
+        mainPanel.setLocationRelativeTo(null);
+        mainPanel.setLayout(null);
+        mainPanel.setVisible(true);
+        mainPanel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainPanel.setResizable(false);
+        mainPanel.add(bgPac);
 
     }
 }

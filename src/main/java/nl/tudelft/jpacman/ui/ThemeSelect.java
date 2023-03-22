@@ -7,16 +7,16 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class ThemeSelect extends JFrame {
-    private JLabel bgTheme;
-    private JLabel logoPac;
-    private JButton themeBtn1;
-    private JButton themeBtn2;
-    private JButton themeBtn3;
-    private JButton themeBtn4;
-    private JButton themeBtn5;
-    private JButton themeBtn6;
-    private JButton btnBackMain;
-    private JButton exitIcon;
+    public JLabel bgTheme;
+    public JLabel logoPac;
+    public JButton themeBtn1;
+    public JButton themeBtn2;
+    public JButton themeBtn3;
+    public JButton themeBtn4;
+    public JButton themeBtn5;
+    public JButton themeBtn6;
+    public JButton btnBackMain;
+    public JButton exitIcon;
     public static int themeNo;
 
     public void setThemeNo(int themeNo){

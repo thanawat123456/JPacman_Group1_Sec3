@@ -7,11 +7,11 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class MainmenuUI extends JFrame {
-    private JLabel bgPac;
-    private JLabel logoPac;
-    private JButton startButton;
-    private JButton exitButton;
-    private JButton exitIcon;
+    public JLabel bgPac;
+    public JLabel logoPac;
+    public JButton startButton;
+    public JButton exitButton;
+    public JButton exitIcon;
 
     public MainmenuUI() {
         super("Pacman Main Menu");

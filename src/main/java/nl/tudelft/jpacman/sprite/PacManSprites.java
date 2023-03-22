@@ -245,7 +245,7 @@ public class PacManSprites extends SpriteStore {
             return loadSprite("/sprite/pellet_mario.png");
         }
         else{
-            return loadSprite("/sprite/pellet.png");
+            return loadSprite("/sprite/pellet_forest.png");
         }
     }
 
