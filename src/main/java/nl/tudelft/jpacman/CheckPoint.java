@@ -14,7 +14,7 @@ public class CheckPoint extends JFrame {
     public JButton startButton;
     public JButton exitButton;
     public JTextField textField1;
-
+    public JButton exitIcon;
     public JButton check1;
     public JButton check2;
     public JButton check3;
@@ -42,7 +42,7 @@ public class CheckPoint extends JFrame {
 
     public CheckPoint() {
         super("Pacman Main Menu");
-
+        setSize(800,800);
         // Create a panel for the buttons
         JFrame mainPanel = new JFrame();
 
@@ -153,7 +153,7 @@ public class CheckPoint extends JFrame {
 
         // Create the Exit buttonIcon
         ImageIcon exitBtnIcon = new ImageIcon(getClass().getResource("/panel_theme/main menu/quit.png"));
-        JButton exitIcon = new JButton(exitBtnIcon);
+        exitIcon = new JButton(exitBtnIcon);
         exitIcon.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);

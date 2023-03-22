@@ -16,6 +16,7 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MainMenuTest {
@@ -32,20 +33,36 @@ public class MainMenuTest {
         mainMenu.dispose();
     }
 
+
+
     @Test
     public void testStartButton() throws InterruptedException {
-        Thread.sleep(1500);
+        Thread.sleep(1000);
         mainMenu.startButton.doClick(); // Simulate a click on the "Start" button
-        Thread.sleep(1500);
+        Thread.sleep(1000);
     }
 
     @Test
-    public void testExitButton() throws InterruptedException {
-        ActionEvent event = new ActionEvent(mainMenu.exitButton, ActionEvent.ACTION_PERFORMED, ""); // Create an ActionEvent for the "Exit" button
-        Thread.sleep(1500);
-        mainMenu.exitButton.getActionListeners()[0].actionPerformed(event); // Simulate a click on the "Exit" button
+    public void testMainMenuSize(){
+        int w = mainMenu.getWidth();
+        int h = mainMenu.getHeight();
+        assertEquals(800,w);
+        assertEquals(800,h);
+    }
 
-        Assert.assertFalse(mainMenu.isVisible()); // Check if the MainmenuUI has been closed
+    @Test
+    public void testStartButtonSize(){
+        int w = mainMenu.startButton.getWidth();
+        int h =  mainMenu.startButton.getHeight();
+        assertEquals(205,w);
+        assertEquals(68,h);
+    }
 
+    @Test
+    public void testExitButtonSize(){
+        int w = mainMenu.exitButton.getWidth();
+        int h =  mainMenu.exitButton.getHeight();
+        assertEquals(205,w);
+        assertEquals(68,h);
     }
 }

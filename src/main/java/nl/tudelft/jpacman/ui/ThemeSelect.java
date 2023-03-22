@@ -28,13 +28,14 @@ public class ThemeSelect extends JFrame {
     }
 
     public ThemeSelect() {
-
+        setSize(800,800);
         // Create a panel
         JFrame themePanel = new JFrame();
         themePanel.setTitle("THEME Test");
 
 
         // Create the Start button
+
         ImageIcon classicIcon = new ImageIcon(getClass().getResource("/sprite/theme1.png"));
         Image img = classicIcon.getImage();
         Image newImg = img.getScaledInstance(150,150, java.awt.Image.SCALE_SMOOTH);

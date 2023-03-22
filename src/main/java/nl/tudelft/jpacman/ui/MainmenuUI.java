@@ -15,8 +15,8 @@ public class MainmenuUI extends JFrame {
 
     public MainmenuUI() {
         super("Pacman Main Menu");
-
-        // Create a panel for the buttons
+        setSize(800,800);
+        // Create a     panel for the buttons
         JFrame mainPanel = new JFrame();
 
         //Start Button
