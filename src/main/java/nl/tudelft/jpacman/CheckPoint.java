@@ -46,8 +46,8 @@ public class CheckPoint extends JFrame {
         JFrame mainPanel = new JFrame();
 
         //Start Button
-        ImageIcon startbBtn = new ImageIcon(getClass().getResource("/panel_theme/main menu/start.png"));
-        startButton = new JButton("Map 1");
+        ImageIcon startbBtn = new ImageIcon(getClass().getResource("/panel_theme/map select/111.png"));
+        startButton = new JButton(startbBtn);
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
@@ -66,8 +66,8 @@ public class CheckPoint extends JFrame {
         mainPanel.add(startButton);
 
         // Create the Exit button
-        ImageIcon exitBtn = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
-        check2 = new JButton("Map 2");
+        ImageIcon exitBtn = new ImageIcon(getClass().getResource("/panel_theme/map select/22.png"));
+        check2 = new JButton(exitBtn);
         check2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
@@ -86,8 +86,8 @@ public class CheckPoint extends JFrame {
         mainPanel.add(check2);
 
 
-        ImageIcon bgcheck2 = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
-        check3 = new JButton("Map 3");
+        ImageIcon bgcheck2 = new ImageIcon(getClass().getResource("/panel_theme/map select/33.png"));
+        check3 = new JButton(bgcheck2);
         check3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
@@ -106,8 +106,8 @@ public class CheckPoint extends JFrame {
         mainPanel.add(check3);
 
 
-        ImageIcon bgcheck4 = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
-        check4 = new JButton("Map 4");
+        ImageIcon bgcheck4 = new ImageIcon(getClass().getResource("/panel_theme/map select/44.png"));
+        check4 = new JButton(bgcheck4);
         check4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
@@ -126,8 +126,8 @@ public class CheckPoint extends JFrame {
         mainPanel.add(check4);
 
 
-        ImageIcon bgcheck5 = new ImageIcon(getClass().getResource("/panel_theme/main menu/exit.png"));
-        check5 = new JButton("Map 5");
+        ImageIcon bgcheck5 = new ImageIcon(getClass().getResource("/panel_theme/map select/55.png"));
+        check5 = new JButton(bgcheck5);
         check5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
