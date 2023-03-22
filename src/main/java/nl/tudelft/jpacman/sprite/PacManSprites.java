@@ -83,7 +83,7 @@ public class PacManSprites extends SpriteStore {
         }
         else {
             String resource = "/sprite/pacman";
-            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+            return directionSprite("/sprite/pacman.png", PACMAN_ANIMATION_FRAMES);
         }
 
     }
