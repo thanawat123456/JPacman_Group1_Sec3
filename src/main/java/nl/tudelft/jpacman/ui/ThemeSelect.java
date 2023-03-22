@@ -1,5 +1,6 @@
 package nl.tudelft.jpacman.ui;
 
+import nl.tudelft.jpacman.CheckPoint;
 import nl.tudelft.jpacman.Launcher;
 
 import java.awt.*;
@@ -46,7 +47,7 @@ public class ThemeSelect extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 setThemeNo(1);
                 new Launcher().launch();
-                themePanel.dispose();
+                dispose();
             }
         });
 
@@ -150,7 +151,7 @@ public class ThemeSelect extends JFrame {
         btnBackMain.setBounds(290, 650, 205, 68);
         btnBackMain.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                new MainmenuUI();
+                new CheckPoint();
                 themePanel.dispose();
             }
         });

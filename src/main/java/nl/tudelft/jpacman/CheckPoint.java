@@ -9,18 +9,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CheckPoint extends JFrame {
-    private JLabel bgPac;
-    private JLabel logoPac;
-    private JButton startButton;
-    private JButton exitButton;
-    private JTextField textField1;
+    public JLabel bgPac;
+    public JLabel logoPac;
+    public JButton startButton;
+    public JButton exitButton;
+    public JTextField textField1;
 
-    private JButton check1;
-    private JButton check2;
-    private JButton check3;
-    private JButton check4;
-    private JButton check5;
+    public JButton check1;
+    public JButton check2;
+    public JButton check3;
+    public JButton check4;
+    public JButton check5;
     public static int checkpoint ;
+    public JButton btnBackMain ;
 
     public static int getCheckpoint() {
         return checkpoint;
@@ -47,8 +48,8 @@ public class CheckPoint extends JFrame {
 
         //Start Button
         ImageIcon startbBtn = new ImageIcon(getClass().getResource("/panel_theme/map select/111.png"));
-        startButton = new JButton(startbBtn);
-        startButton.addActionListener(new ActionListener() {
+        check1 = new JButton(startbBtn);
+        check1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 new ThemeSelect();
                 setCheckpoint(1);
@@ -57,13 +58,13 @@ public class CheckPoint extends JFrame {
             }
         });
         //hide background of JButton
-        startButton.setBorderPainted(false);
-        startButton.setContentAreaFilled(false);
-        startButton.setFocusPainted(false);
-        startButton.setOpaque(false);
-        startButton.setBounds(290, 300, 205, 68);
-        startButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        mainPanel.add(startButton);
+        check1.setBorderPainted(false);
+        check1.setContentAreaFilled(false);
+        check1.setFocusPainted(false);
+        check1.setOpaque(false);
+        check1.setBounds(290, 300, 205, 68);
+        check1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mainPanel.add(check1);
 
         // Create the Exit button
         ImageIcon exitBtn = new ImageIcon(getClass().getResource("/panel_theme/map select/22.png"));
@@ -174,7 +175,7 @@ public class CheckPoint extends JFrame {
         Image btnMain = btnMainmenu.getImage();
         Image btnMainMenu = btnMain.getScaledInstance(205, 68, java.awt.Image.SCALE_SMOOTH);
         btnMainmenu = new ImageIcon(btnMainMenu);
-        JButton btnBackMain = new JButton(btnMainmenu);
+        btnBackMain = new JButton(btnMainmenu);
         btnBackMain.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         btnBackMain.setBounds(290, 730, 205, 68);
         btnBackMain.addActionListener(new ActionListener() {
