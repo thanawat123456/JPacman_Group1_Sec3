@@ -56,7 +56,7 @@ public class CheckPoint extends JFrame {
 
         //Start Button
         ImageIcon bg1 = new ImageIcon(getClass().getResource("/sprite/btnStart.png"));
-        check1 = new JButton("ด่านที่ 1");
+        check1 = new JButton("Map 1");
         check1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -71,7 +71,7 @@ public class CheckPoint extends JFrame {
 
         // Create the Exit button
         ImageIcon exitBtn = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
-        check2 = new JButton("ด่านที่ 2");
+        check2 = new JButton("Map 2");
         check2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -86,7 +86,7 @@ public class CheckPoint extends JFrame {
 
         // Create the Exit button
         ImageIcon bg2 = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
-        check3 = new JButton("ด่านที่ 3");
+        check3 = new JButton("Map 3");
         check3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -101,7 +101,7 @@ public class CheckPoint extends JFrame {
 
         // Create the Exit button
         ImageIcon bg4 = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
-        check4 = new JButton("ด่านที่ 4");
+        check4 = new JButton("Map 4");
         check4.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -117,7 +117,7 @@ public class CheckPoint extends JFrame {
 
         // Create the Exit button
         ImageIcon bg5 = new ImageIcon(getClass().getResource("/sprite/btnExit.png"));
-        check5 = new JButton("ด่านที่ 5");
+        check5 = new JButton("Map 5");
         check5.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         check5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

@@ -129,6 +129,16 @@ public class PacManSprites extends SpriteStore {
                 + ".png";
             return directionSprite(resource, GHOST_ANIMATION_FRAMES);
         }
+        else if (themeSelect.getThemeNo() == 5){
+            String resource = "/sprite_theme5/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
+        else if (themeSelect.getThemeNo() == 6){
+            String resource = "/sprite_theme6/ghost_" + color.name().toLowerCase()
+                + ".png";
+            return directionSprite(resource, GHOST_ANIMATION_FRAMES);
+        }
         else {
             String resource = "/sprite/ghost_" + color.name().toLowerCase()
                 + ".png";
@@ -153,6 +163,12 @@ public class PacManSprites extends SpriteStore {
         }
         else if (themeSelect.getThemeNo()==4){
             return loadSprite("/sprite/wall_tom.png");
+        }
+        else if (themeSelect.getThemeNo()==5){
+            return loadSprite("/sprite/wall_forest.png");
+        }
+        else if (themeSelect.getThemeNo()==6){
+            return loadSprite("/sprite/wall_mario.png");
         }
         else {
             return loadSprite("/sprite/wall_tom.png");
@@ -195,6 +211,9 @@ public class PacManSprites extends SpriteStore {
         }
         else if (themeSelect.getThemeNo()==4){
             return loadSprite("/sprite/pellet_tom.png");
+        }
+        else if (themeSelect.getThemeNo()==6){
+            return loadSprite("/sprite/pellet_mario.png");
         }
         else{
             return loadSprite("/sprite/pellet.png");
